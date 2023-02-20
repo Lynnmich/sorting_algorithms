@@ -4,26 +4,27 @@
  * bubble_sort - function that uses bubble sort to sort an array
  * @array: array of numbers to sort
  * @size: size of array
+ * tmp: temporary var to hold one var while swapping
  * Return: none
 */
 void bubble_sort(int *array, size_t size)
 {
-	int temp, swap;
+	int temp, check;
 	size_t j;
 
-	swap = 1;
+	check = 1;
 	if (array == NULL || size < 2)
 		return;
-	while (swap != 0)
+	while (check != 0)
 	{
-		swap = 0;
+		check = 0;
 		for (j = 0; j < size - 1; j++)
 			if (array[j] > array[j + 1])
 			{
 				temp = array[j];
 				array[j] = array[j + 1];
 				array[j + 1] = temp;
-				swap = 1;
+				check = 1;
 				print_array(array, size);
 			}
 	}

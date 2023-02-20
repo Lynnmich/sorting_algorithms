@@ -1,12 +1,11 @@
 #include "sort.h"
 /**
- * insertion_sort_list - sort a doubly linked list using\
- * the insertion sort algorithm
- * @list: Pointer to pointer of head of the list
+ * insertion_sort_list - sort a doubly linked list
+ * @list: doubly linked list to be sorted
 */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *temp, *new, *other;
+	listint_t *tmp, *new, *other;
 
 	if (!list || !(*list) || !(*list)->next)
 		return;
@@ -29,7 +28,7 @@ void insertion_sort_list(listint_t **list)
 			new->next = new->prev;
 			temp = new->prev->prev;
 			new->prev->prev = new;
-			new->prev = temp;
+			new->prev = tmp;
 			print_list(*list);
 		}
 	}
