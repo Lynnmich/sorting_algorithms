@@ -27,11 +27,11 @@ int partition(int *array, int low_ind, int high_ind, size_t size)
 			}
 		}
 	}
-	if (pivot_element < array[i + 1])
+	if (pivot_elem < array[i + 1])
 	{
 		temp = array[i + 1];
-		array[i + 1] = array[high_index];
-		array[high_index] = temp;
+		array[i + 1] = array[high_ind];
+		array[high_ind] = temp;
 		print_array(array, size);
 	}
 	return (i + 1);
