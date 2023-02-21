@@ -3,6 +3,7 @@
  *swap: swaps two elements in the list
  *@list: doubly linked list to be sorted
  */
+void insertion_sort_list(listint_t **list);
 listint_t *swap(listint_t *head) {
 	listint_t * start = new listint_t();
 	start->next = head;
